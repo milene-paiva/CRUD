@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do usuario</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <header>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path class="wave-1"
+        d="M0 150L23.8 125.5C47.7 101 95.3 52 143 47.3C190.7 42.7 238.3 82.3 286 103.5C333.7 124.7 381.3 127.3 428.8 123.3C476.3 119.3 523.7 108.7 571.2 91.2C618.7 73.7 666.3 49.3 714 40.7C761.7 32 809.3 39 857 56.8C904.7 74.7 952.3 103.3 1000 104.8C1047.7 106.3 1095.3 80.7 1143 58.7C1190.7 36.7 1238.3 18.3 1286 18.3C1333.7 18.3 1381.3 36.7 1428.8 41.3C1476.3 46 1523.7 37 1571.2 35.5C1618.7 34 1666.3 40 1714 56.7C1761.7 73.3 1809.3 100.7 1857 115.8C1904.7 131 1952.3 134 1976.2 135.5L2000 137L2000 0L1976.2 0C1952.3 0 1904.7 0 1857 0C1809.3 0 1761.7 0 1714 0C1666.3 0 1618.7 0 1571.2 0C1523.7 0 1476.3 0 1428.8 0C1381.3 0 1333.7 0 1286 0C1238.3 0 1190.7 0 1143 0C1095.3 0 1047.7 0 1000 0C952.3 0 904.7 0 857 0C809.3 0 761.7 0 714 0C666.3 0 618.7 0 571.2 0C523.7 0 476.3 0 428.8 0C381.3 0 333.7 0 286 0C238.3 0 190.7 0 143 0C95.3 0 47.7 0 23.8 0L0 0Z"
+        fill="#15638c" stroke-linecap="round" stroke-linejoin="miter"></path>
+      <path class="wave-2"
+        d="M0 11L23.8 24.2C47.7 37.3 95.3 63.7 143 64.3C190.7 65 238.3 40 286 31.7C333.7 23.3 381.3 31.7 428.8 44.2C476.3 56.7 523.7 73.3 571.2 83.8C618.7 94.3 666.3 98.7 714 86C761.7 73.3 809.3 43.7 857 28.7C904.7 13.7 952.3 13.3 1000 27.2C1047.7 41 1095.3 69 1143 84C1190.7 99 1238.3 101 1286 88C1333.7 75 1381.3 47 1428.8 45.8C1476.3 44.7 1523.7 70.3 1571.2 79.2C1618.7 88 1666.3 80 1714 67C1761.7 54 1809.3 36 1857 25.8C1904.7 15.7 1952.3 13.3 1976.2 12.2L2000 11L2000 0L1976.2 0C1952.3 0 1904.7 0 1857 0C1809.3 0 1761.7 0 1714 0C1666.3 0 1618.7 0 1571.2 0C1523.7 0 1476.3 0 1428.8 0C1381.3 0 1333.7 0 1286 0C1238.3 0 1190.7 0 1143 0C1095.3 0 1047.7 0 1000 0C952.3 0 904.7 0 857 0C809.3 0 761.7 0 714 0C666.3 0 618.7 0 571.2 0C523.7 0 476.3 0 428.8 0C381.3 0 333.7 0 286 0C238.3 0 190.7 0 143 0C95.3 0 47.7 0 23.8 0L0 0Z"
+        fill="#33105d" stroke-linecap="round" stroke-linejoin="miter"></path>
+    </svg>
+  </header>
+  <main class="conteudo-usuario">
+
+
+    
+    <form>
+      <h2>Denúncia:</h2>
+      <label for="">Pesquisar por CPF:</label> <br />
+      <input  type="text" id="cpf" maxlength="14"/>
+
+      <input class="botao-usuario" type="button" value="Buscar" onclick="buscarDados()" /><br>
+      <h3>Denuncia:</h3>
+      <label for="">ID:</label>
+      <input type="text" id="id" readonly>
+      <label for="">E-mail:</label>
+      <input type="text" id="emailAtualizar">
+      <label for="">Senha:</label>
+      <input  type="text" id="senhaAtualizar">
+      <label for="">Nome do Denunciante:</label>
+      <input  type="text" id="nomeDAtualizar">
+      <label for="">Nome do Acusado:</label>
+      <input  type="text" id="nomeAAtualizar">
+      <label for="">Data e hora:</label>
+      <input  type="text" id="dataEhoraAtualizar">
+      <label for="">Local:</label>
+      <input  type="text" id="localAtualizar">
+      <label for="">Ocorrência</label>
+    <textarea name="" id="ocorrenciaAtualizar" cols="30" rows="10"></textarea>
+    <label for="">Testemunhas:</label>
+      <input type="text" id="testemunhasAtualizar">
+      <label for="">Evidências:</label>
+      <input type="text" id="evidenciasAtualizar">
+      <label for="">Informações adicionais</label>
+     <textarea name="" id="infoAdicionaisAtualizar" cols="30" rows="10"></textarea>
+      <input class="botao-usuario" type="button" value="Atualizar" onclick="atualizarDados()" />
+      <input class="botao-usuario" type="button" onclick="deletarDados()" value="Deletar">
+    </form>
+
+   
+
+  </main>
+
+  <footer>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
